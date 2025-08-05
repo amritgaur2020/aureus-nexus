@@ -1,92 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aureus Nexus | Smart Crypto Trading</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aureus Nexus | Infinite Crypto Trading</title>
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Background Animation Canvas (Cosmic/Neon Effect) -->
-  <canvas id="cosmicBg"></canvas>
-  
-  <nav class="navbar">
+  <nav>
     <div class="logo">Aureus Nexus</div>
-    <ul class="nav-links">
-      <li><a href="#home" class="nav-animate">Home</a></li>
-      <li><a href="#about" class="nav-animate">About</a></li>
-      <li><a href="#services" class="nav-animate">Buy USDT</a></li>
-      <li><a href="#why" class="nav-animate">Why Us</a></li>
-      <li><a href="#contact" class="nav-animate">Contact</a></li>
+    <ul>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <section id="home" class="section hero">
-    <div class="hero-content">
-      <h1 class="glowText reveal">INFINITE <span>CRYPTO TRADING</span></h1>
-      <p class="reveal">Unlock profit with Aureus Nexus: <span class="highlight">Buy, Sell & Arbitrage USDT</span>—Zero Hassle, Maximum Returns.</p>
-      <a href="#services" class="cta-btn reveal">Get Started</a>
+  <section id="hero" class="hero-bg">
+    <div class="center-content">
+      <h1 class="gradient-text">INFINITE <span>CRYPTO TRADING</span></h1>
+      <p class="subtitle">Buy USDT at the lowest price, sell high, and unlock smart profits with Aureus Nexus. Experience the future of crypto arbitrage and peer-to-peer trading.</p>
+      <a href="#services" class="btn">Get Started</a>
     </div>
   </section>
-
-  <section id="about" class="section gradient-section">
-    <h2 class="section-title reveal">About Aureus Nexus</h2>
-    <p class="about-desc reveal">Aureus Nexus is your gateway to seamless crypto profits. We specialize in buying USDT at the lowest prices and passing on the advantage to clients who want to buy crypto & stablecoins efficiently. Our advanced algorithms and dedicated experts enable arbitrage and fast settlements—so you always stay ahead in the volatile world of digital currencies.</p>
+  <section id="about">
+    <h2>About Aureus Nexus</h2>
+    <p>
+      We are a next-generation crypto platform specializing in <b>USDT buying</b>, real-time arbitrage, and seamless P2P sales. As market-makers, we help you buy crypto at market dips, sell at peaks, and offer reliable, instant settlements for both individuals and institutions.
+    </p>
   </section>
-
-  <section id="services" class="section dark-section">
-    <h2 class="section-title reveal">Our Crypto Services</h2>
-    <div class="services-container">
-      <div class="service-card revealUp">
-        <div class="icon"><span>🪙</span></div>
-        <h3>Buy USDT Instantly</h3>
-        <p>Purchase USDT and other major stablecoins at market-beating rates. Fast KYC and P2P settlements—trusted by crypto traders across the world.</p>
-        <a href="#contact" class="service-btn">Buy Now</a>
+  <section id="services">
+    <h2>Our Crypto Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Low Cost Crypto Buys</h3>
+        <p>Get USDT and other coins at industry-lowest rates, directly to your wallet in seconds.</p>
       </div>
-      <div class="service-card revealUp">
-        <div class="icon"><span>💹</span></div>
-        <h3>Smart Arbitrage</h3>
-        <p>We utilize global price differences to buy low and sell high—passing profits to our clients. Transparent, real-time pricing. Let your crypto work for you!</p>
-        <a href="#contact" class="service-btn">Grow Your Crypto</a>
+      <div class="card">
+        <h3>Safe Arbitrage Engine</h3>
+        <p>We scan exchanges globally, buy low, sell high, and let you benefit from the spread on every order.</p>
       </div>
-      <div class="service-card revealUp">
-        <div class="icon"><span>🚀</span></div>
-        <h3>Sell Crypto Securely</h3>
-        <p>Sell USDT, ETH, BTC, or any major crypto instantly to us at premium prices. Instant INR/fiat settlements via your preferred payment method.</p>
-        <a href="#contact" class="service-btn">Sell Now</a>
+      <div class="card">
+        <h3>Sell Crypto Instantly</h3>
+        <p>Cash out your USDT, BTC, ETH securely at any time—no limits, instant INR or fiat payout options.</p>
+      </div>
+      <div class="card">
+        <h3>24/7 Expert Support</h3>
+        <p>Crypto never sleeps—our support team is online for you day and night, no matter the market.</p>
       </div>
     </div>
   </section>
-
-  <section id="why" class="section gradient-section">
-    <h2 class="section-title reveal">Why Choose Aureus Nexus?</h2>
-    <ul class="why-list">
-      <li class="revealUp"><b>Lightning Fast:</b> <span>Instant P2P and arbitrage trades—never miss an opportunity!</span></li>
-      <li class="revealUp"><b>Transparency:</b> <span>See live buy/sell prices and competitive spreads before you trade.</span></li>
-      <li class="revealUp"><b>Security:</b> <span>Escrow, KYC, and 24/7 support for every customer.</span></li>
-      <li class="revealUp"><b>Expert Assistance:</b> <span>Personal crypto account managers for large orders or new users.</span></li>
-      <li class="revealUp"><b>High Liquidity:</b> <span>Buy and sell any amount instantly—no waiting, no limits.</span></li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section dark-section">
-    <h2 class="section-title reveal">Contact Us</h2>
-    <form id="contactForm" class="contact-form revealUp" onsubmit="return handleForm(event)">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
-      <button type="submit" class="cta-btn">Send Message</button>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return submitForm(event)">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+      <div id="form-status"></div>
     </form>
-    <div id="formStatus"></div>
   </section>
-
   <footer>
     &copy; 2025 Aureus Nexus. All rights reserved.
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
-
