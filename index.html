@@ -4,169 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aureus Nexus</title>
-  <style>
-    /* Global Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a0f;
-      color: #ececec;
-      scroll-behavior: smooth;
-    }
-    a { color: inherit; text-decoration: none; }
-    nav {
-      position: fixed; width: 100%; top: 0; left: 0;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 2rem; background: rgba(0,0,0,0.6); z-index: 100;
-    }
-    nav .logo { font-size: 1.5rem; font-weight: bold; color: #75f; }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav ul li { position: relative; }
-    nav ul li::after {
-      content: ''; position: absolute; left: 0; bottom: -4px;
-      width: 0; height: 2px; background: #75f; transition: width .3s;
-    }
-    nav ul li:hover::after { width: 100%; }
-    section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 4rem 2rem; }
-    /* Hero */
-    #home {
-      background: url('attached_image_1.jpg') center/cover no-repeat;
-      position: relative; text-align: center; color: #fff;
-    }
-    #home::before {
-      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(10,10,15,0.7);
-    }
-    #home .content {
-      position: relative; z-index: 1; max-width: 800px;
-    }
-    #home h1 {
-      font-size: 4rem; background: linear-gradient(90deg,#4fd1ff,#805ad5);
-      -webkit-background-clip: text; color: transparent;
-    }
-    #home p { margin: 1rem 0 2rem; font-size: 1.2rem; }
-    #home .btn {
-      padding: 0.75rem 2rem; border: 2px solid #4fd1ff;
-      color: #4fd1ff; font-size: 1rem; border-radius: 4px;
-      transition: background .3s, color .3s;
-    }
-    #home .btn:hover { background: #4fd1ff; color: #0a0a0f; }
-    /* About */
-    #about .container {
-      max-width: 900px; text-align: center;
-    }
-    #about h2 {
-      font-size: 2.5rem; margin-bottom: 1rem;
-      background: linear-gradient(90deg,#4fd1ff,#805ad5);
-      -webkit-background-clip: text; color: transparent;
-    }
-    #about p { font-size: 1.1rem; line-height: 1.6; }
-    /* Services */
-    #services .cards {
-      display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 2rem; max-width: 1000px; width: 100%;
-    }
-    .card {
-      background: #12121a; border-radius: 8px; padding: 2rem;
-      text-align: center; transition: transform .3s;
-    }
-    .card:hover { transform: translateY(-8px); }
-    .card h3 {
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg,#4fd1ff,#805ad5);
-      -webkit-background-clip: text; color: transparent;
-    }
-    .card p { font-size: 0.95rem; line-height: 1.5; }
-    .card .learn { margin-top: 1.5rem; display: inline-block;
-      color: #75f; font-weight: bold; }
-    /* Contact */
-    #contact .container {
-      max-width: 600px; background: #12121a; padding: 2rem; border-radius: 8px;
-    }
-    #contact h2 { text-align: center; margin-bottom: 1rem; }
-    #contact form { display: flex; flex-direction: column; gap: 1rem; }
-    #contact input, #contact textarea {
-      padding: 0.75rem; border: none; border-radius: 4px;
-      background: #1e1e2e; color: #ececec;
-    }
-    #contact button {
-      padding: 0.75rem; border: none; border-radius: 4px;
-      background: #4fd1ff; color: #0a0a0f; font-size: 1rem;
-      cursor: pointer; transition: background .3s;
-    }
-    #contact button:hover { background: #75f; }
-    /* Footer */
-    footer {
-      text-align: center; padding: 1rem; font-size: 0.9rem;
-      background: rgba(0,0,0,0.6);
-    }
-    @media(max-width:768px){
-      nav ul { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
     <div class="logo">Aureus Nexus</div>
-    <ul>
+    <ul class="menu">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li class="toggle"><span>&#9776;</span></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home">
+  <section id="home" class="hero">
     <div class="content">
       <h1>Infinite Crypto Trading</h1>
-      <p>Peer-to-peer, arbitrage opportunities, and crypto sales—all in one seamless platform.</p>
-      <a href="#services" class="btn">Get Started</a>
+      <p>Peer-to-peer, arbitrage, and crypto sales—all in one seamless platform.</p>
+      <button class="btn" onclick="scrollToSection('services')">Get Started</button>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
-    <div class="container">
-      <h2>About Aureus Nexus</h2>
-      <p>Aureus Nexus is a cutting-edge cryptocurrency exchange specializing in P2P trading, cross-exchange arbitrage, and direct crypto sales. Our mission is to empower users worldwide with secure, fast, and profit-driven crypto solutions powered by advanced matching algorithms and real-time liquidity aggregation.</p>
-    </div>
+    <h2>About Us</h2>
+    <p>Aureus Nexus is a next-gen crypto exchange specializing in P2P trading, arbitrage, and direct crypto sales. We empower users with secure, fast, and profitable solutions.</p>
   </section>
 
   <!-- Services Section -->
   <section id="services">
+    <h2>Our Services</h2>
     <div class="cards">
       <div class="card">
-        <h3>Peer-to-Peer Trading</h3>
-        <p>Connect directly with buyers and sellers across the globe. Enjoy competitive rates, escrow protection, and instant settlements.</p>
-        <a href="#" class="learn">Learn More →</a>
+        <h3>P2P Trading</h3>
+        <p>Connect with buyers and sellers directly. Instant settlements with escrow protection.</p>
       </div>
       <div class="card">
-        <h3>Arbitrage Engine</h3>
-        <p>Identify and execute arbitrage opportunities across multiple exchanges with minimal latency and maximum accuracy.</p>
-        <a href="#" class="learn">Learn More →</a>
+        <h3>Arbitrage</h3>
+        <p>Find price gaps across exchanges and execute automatically for profit.</p>
       </div>
       <div class="card">
         <h3>Crypto Sales</h3>
-        <p>Buy and sell top cryptocurrencies at real-time market prices. Enjoy low fees, high liquidity, and a seamless user experience.</p>
-        <a href="#" class="learn">Learn More →</a>
+        <p>Buy & sell top coins at market rates. Low fees and high liquidity.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="formStatus"></div>
   </section>
 
   <!-- Footer -->
@@ -174,6 +70,8 @@
     &copy; 2025 Aureus Nexus. All rights reserved.
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
+
 
